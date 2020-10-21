@@ -1,0 +1,1 @@
+./Debug/debug.cpp.o ./Debug/alloc.cpp.o ./Debug/main.cpp.o ./Debug/auto_test.cpp.o   
