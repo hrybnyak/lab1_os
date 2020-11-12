@@ -8,7 +8,6 @@
 
 #include "alloc.h"
 #include "debug.h"
-#include "auto_test.h"
 
 int main() {
   alloc::Allocator allocator(300);
@@ -23,8 +22,6 @@ int main() {
   allocator.mem_dump();
   void *mem1_realloc = allocator.mem_realloc(mem1, 50);
   allocator.mem_dump();
-
-//autotest::test(100, 200, 10000);
 
   // service info
   std::cout << "Info chunk size (per each allocation): " << sizeof(alloc::Chunk) << std::endl;

@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Lisa
-Date                   :=29/09/2020
+Date                   :=10/11/2020
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/TDM-GCC-64/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-64/bin/g++.exe -shared -fPIC
@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/debug.cpp$(ObjectSuffix) $(IntermediateDirectory)/alloc.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/auto_test.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/debug.cpp$(ObjectSuffix) $(IntermediateDirectory)/alloc.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
 
 
 
@@ -110,12 +110,6 @@ $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Lisa/Desktop/pr1/lab1/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
-
-$(IntermediateDirectory)/auto_test.cpp$(ObjectSuffix): auto_test.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/auto_test.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/auto_test.cpp$(DependSuffix) -MM auto_test.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Lisa/Desktop/pr1/lab1/auto_test.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/auto_test.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/auto_test.cpp$(PreprocessSuffix): auto_test.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/auto_test.cpp$(PreprocessSuffix) auto_test.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

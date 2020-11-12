@@ -11,8 +11,6 @@
     <File Name="main.cpp"/>
     <File Name="alloc.h"/>
     <File Name="alloc.cpp"/>
-    <File Name="auto_test.h"/>
-    <File Name="auto_test.cpp"/>
     <File Name="debug.h"/>
     <File Name="debug.cpp"/>
   </VirtualDirectory>
